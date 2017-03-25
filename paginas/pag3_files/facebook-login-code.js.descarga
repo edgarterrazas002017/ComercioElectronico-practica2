@@ -1,0 +1,149 @@
+  // Additional JS functions here
+ window.fbAsyncInit = function() {
+ 
+    FB.init({
+      appId      : '1673710092957821',
+      xfbml      : true,
+      cookie     : true,  // enable cookies to allow the server to access 
+      version    : 'v2.7',
+      status     : true
+    });
+ 
+ 
+//    FB.init({
+//    appId      : '401736936565429',
+//    cookie     : true,  // enable cookies to allow the server to access 
+//                        // the session
+//    xfbml      : true,  // parse social plugins on this page
+//    version    : 'v2.0' // use version 2.0
+//  });
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+    
+    // Additional init code here
+    
+       function statusChangeCallback(response) {
+            console.log('statusChangeCallback');
+            console.log(response);
+            if (response.status === 'connected') {
+            // Logged into your app and Facebook.
+                if(document.getElementById("logout")!=null){
+                     document.getElementById("logout").href='salir';	
+                }
+           // testAPI();
+            } else if (response.status === 'not_authorized') {
+            // The person is logged into Facebook, but not your app.
+                if(document.getElementById("logout")!=null){
+                 document.getElementById("logout").href='index.php?page=login&logout=now';
+                }
+                document.getElementById('status').innerHTML = 'Bienvenido visitante... Puedes ingresar a nuestro sitio con tu cuenta de Facebook.';
+            } else {
+            // The person is not logged into Facebook, so we're not sure if
+            // they are logged into this app or not.
+                if(document.getElementById("logout")!=null){	
+                document.getElementById("logout").href='index.php?page=login&logout=now';
+            }
+                if (document.getElementById('status') != null){
+                    document.getElementById('status').innerHTML = 'Bienvenido... Puede registrarse con su cuenta de Facebook.';
+                }
+            }
+        }
+       
+
+  };
+  
+  
+
+   // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/es_LA/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+
+  function TumomoFacebookConected(){
+     
+     jQuery('#cargador-facebook').css('display','block');
+    // FB.login(function(response) {
+        
+    //if (response.authResponse) {
+     //console.log('Welcome!  Fetching your information.... ');
+     FB.api('/me', {fields: 'name,email,first_name,last_name,id'}, function(response) {
+     //console.log('Good to see you, ' + response.email + '.');
+     jQuery("#botonFB").html("Un momento por favor...");
+      jQuery(location).attr('href','dynamic/fbRegistro/checkUser.php?em='+response.email+'&nom='+response.name+'&first='+response.first_name+'&last='+response.last_name+'&idface='+response.id);
+     });
+    //} else {
+     console.log('Usuario no Autorizado');
+    //}
+    //}, {scope: 'email'});
+  }
+
+  
+  
+  
+     jQuery(function(){
+            jQuery('a[href=register]').click(function(e) {
+                    e.preventDefault();
+                    showModal();
+            });
+            jQuery('#logout').click(function(e) {
+                    e.preventDefault();
+                    var link = jQuery("#logout").attr("href");
+                    if(link=='salir'){
+                            jQuery.msg({
+                              bgPath      : 'img/',
+                              autoUnblock : false,
+                              clickUnblock : true,
+                              css : {
+                                 background : '#ffffff',
+                                 border : '10px solid #cccccc'
+                              },
+                              content : '<div id="maindivf" style="height:140px">'+                                      
+                                                    //'<br /><img src="img/icon_alert_small.png" width="60" height="48"/ >'+
+                                                    '<br /><br />'+
+                                                    '<p class="titlef">¿Est&aacute; seguro que desea cerrar su sesi&oacute;n?</p>'+
+                                                    //'<br /><p class="line"></p><br />'+
+                                                    '<br />'+
+                                                    '<p style="margin-top:10px;"><button id="regfSi" class="btn btn-success">SI</button>&nbsp;&nbsp;<button id="regfNo" class="btn btn-danger">NO</button></p>'+
+                                                    '</div>'+
+                                                    '<br /><br />',                                       
+                              afterBlock : function(){
+                                    // store 'this' for other scope to use
+                                    var self = this;
+
+                                    // delete user and auto unblock the screen after 1 second
+                                    // when click #yes btn
+                                      jQuery( '#regfNo' ).bind( 'click', function(){
+                                                     self.unblock();
+                                                    //var url = "http://www.tumomo.com/index.php?page=account";    
+                                                    //jQuery(location).attr('href',url);	
+
+                                      });
+
+                                      jQuery( '#regfSi' ).bind( 'click', function(){						
+                                                    var url = "http://www.tumomo.com/index.php?page=login&logout=now";    
+                                                    FB.logout(function(response) { 
+                                                        console.log('cerrar session.');
+                                                        jQuery(location).attr('href',url);
+                                                    });															
+                                      });
+                             },
+                             beforeUnblock : function(){
+                                    //alert( 'This is a callback from beforeUnblock event handler :)' )
+                             }
+         });
+
+                    }else{
+                       var url = "./index.php?page=login&logout=now";    
+                       jQuery(location).attr('href',url);	
+                    }
+            });
+
+
+
+    });

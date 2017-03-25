@@ -1,0 +1,90 @@
+#DER{
+    margin-left: 8px;
+}
+#slider_doble{
+    border:  1px none green;
+    margin-top: 15px;
+    margin-bottom: 25px; 
+    margin: 0 auto;
+    display: inline-block;
+    
+}
+
+#separador_sliders{
+    border: 1px none blue;
+    float: left;
+    height: 6px;
+    width: 10px;
+}
+
+
+.jssorb01 {
+            position: absolute;
+        }
+        .jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 12px;
+            height: 12px;
+            filter: alpha(opacity=70);
+            opacity: .7;
+            overflow: hidden;
+            cursor: pointer;
+            border: #000 1px none;
+        }
+        .jssorb01 div { background-color: gray; }
+        .jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
+        .jssorb01 .av { background-color: #fff; }
+        .jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
+
+        .jssora02l, .jssora02r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+            background: url('../img/a11.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora02l { background-position: -3px -33px; }
+        .jssora02r { background-position: -63px -33px; }
+        .jssora02l:hover { background-position: -123px -33px; }
+        .jssora02r:hover { background-position: -183px -33px; }
+        .jssora02l.jssora02ldn { background-position: -3px -33px; }
+        .jssora02r.jssora02rdn { background-position: -63px -33px; }
+        .enlace_diamante{ text-decoration:none;}
+        .cont_slider_big{position: relative; /*margin: 0 auto; top: 0px; left: 0px; */float: left;  width: 465px; height: 266px; overflow: hidden; visibility: hidden; margin-top: 0px; border: none 1px black;}
+        .cont_slider_big_loading{position: absolute; top: 0px; left: 0px;}
+        .cont_seg_slider_big{cursor: default; position: relative; top: 0px; left: 0px; width: 465px; height: 266px; overflow: hidden;}        
+        
+        
+        
+@media all and (min-width: 450px) {    
+    #slider_doble{
+        margin-left: 56px;
+    }
+   
+
+
+}
+
+
+@media all and (min-width: 650px) {
+    #slider_doble{
+        margin-left: 0px;
+        margin-top: 25px;
+    }
+     #separador_sliders{
+        width: 7px;
+    } 
+
+}
+
+@media all and (min-width: 975px) {
+    
+    #separador_sliders{
+        width: 34px;
+    }
+  
+}        

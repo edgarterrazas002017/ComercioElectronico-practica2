@@ -1,0 +1,242 @@
+#barra-superior {
+    background: #FFD427; 
+    //background: url(../img/bgr-dmujer2017.jpg) no-repeat center #FF8EA2;
+    width: 100%; 
+    height: 55px; 
+    position:fixed; 
+    top: 0px; 
+    z-index: 1000; 
+}
+
+#bloque-logo {
+    float: left; 
+    margin-left: 22px;
+    margin-top: -10px;
+}
+
+#opcion-menu {
+    background-image: url(../img/sprite_header.png); 
+    background-position: -10px -40px;
+    width: 30px; /* Icon width */
+    height: 30px; /* Icon height */
+    margin-top: -2px;
+    display: none;
+    
+}
+
+#bloque-logo-img {
+    background-image: url(../img/sprite_header.png); 
+    background-position: -10px 5px;
+    margin-top: 2px;
+    float: left; 
+    width: 150px;
+    height: 40px;
+    margin-left: -15px;
+}
+
+#icono-carrito{
+    background-image: url(../img/sprite_header.png); 
+    background-position: -110px 37px;
+    width: 25px;
+    height: 25px;
+    float: right; 
+    margin-top: -10px; 
+    margin-left: -20px
+}
+
+#numero-carrito {
+    background: red; 
+    font-size: 0.9em; 
+    font-weight: bold; 
+    color: #ffffff; 
+    width: 15px; 
+    float: right; 
+    border-radius: 20px; 
+    padding: 1px; 
+    margin-top: -14px; 
+    margin-right: -10px;
+}
+
+#user-carrito {
+    float: left; 
+    width: 35px;
+}
+
+#arrow_ciudades{
+    float: right;
+    width: 10px;
+    margin-top: 6px;
+    margin-left: -10px;    
+}
+
+#arrow_categorias{
+    float: left;
+    width: 10px;
+    margin-top: -9px;
+    margin-left: 175px;
+}
+
+#arrow_tiendas{
+    float: left;
+    width: 10px;
+    margin-top: -9px;
+    margin-left: 158px;
+}
+
+#arrow_puntos_pago{
+    float: left;
+    width: 10px;
+    margin-top: -9px;
+    margin-left: 148px;
+}
+
+#arrow_publicar{
+    float: left;
+    width: 10px;
+    margin-top: 6px;
+    margin-left: -10px;    
+}
+
+#arrow_ayuda{
+    float: left;
+    width: 10px;
+    margin-top: -9px;
+    margin-left: 100px;
+}
+
+.arrow-down{
+    float: right;
+    background-image: url(../img/sprite_header.png); 
+    background-position: -51px 33px;
+    width: 10px;
+    height: 5px;
+}
+
+#bloque-ciudades {
+    float: left; 
+    width: auto;
+    margin-top: 29px;
+    
+}
+
+#arrow_menu {
+    width: auto; 
+    height: auto
+}
+
+.user-menu{
+    float: left; 
+    width: 90px
+}
+
+.contenedor-user-arrow{
+    margin-top: -10px;
+}
+
+.btn_buscar {
+    background-image: url(../img/btn_buscar.jpg);
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ccc;
+    margin-left: -4px;
+    margin-top: 0px;
+    cursor: pointer;
+} 
+
+#q{
+  font-size:1.1em;
+  padding-left:10px;
+  vertical-align:top;
+  margin: 0 auto;
+  border:1px solid #c3c3c3; 
+  width:58%;
+  color:#666666; 
+  height:33px; 
+  border-radius: 0px;
+  margin-left: -143px;
+}
+
+a.lnkTopMenu:link, a.lnkTopMenu:visited, a.lnkTopMenu:active, a.lnkTopMenu:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+    margin-right: 10px;
+}    
+
+#logo-buscador-cuenta {
+    border: 0px solid blue; 
+    width: 100%;//1er cambio
+    margin: 0 auto;
+}
+
+#bloque-buscador {
+    border: 0px solid green;
+    width: 50%; 
+    margin: 0 auto; 
+    margin-top: 10px;
+}
+
+#bloque-opciones {
+    border: 0px solid red; 
+    float: right; 
+    width:400px; 
+    margin-top: -40px; 
+    margin-right: 10px;
+}
+
+.jq-dropdown .jq-dropdown-menu li>a:hover {
+    color: #FF6B3B;
+}
+
+.ui-helper-hidden-accessible { 
+    display:none; 
+}
+
+#contenedor-opcion-menu {
+    float: left; 
+    width: 30px; 
+    height: 30px; 
+    margin-top: 13px; 
+    margin-right: 5px;
+}
+
+#hola-usuario {
+    height: 20px; 
+    font-weight: bold; 
+    margin: 10px 0 5px 0;
+}
+
+#barra-categorias-servicios-pagos {
+    background: #ededef;
+    width: 100%; 
+    height: 25px; 
+    margin-top: 55px;
+}
+
+#tmmpegas_ses {
+    border: 0px solid blue; 
+    width: 147px; 
+    float: left; 
+    margin-left: 10px;
+}
+
+#tmmpegas_no_ses{
+    border: 0px solid blue; 
+    width: 147px; 
+    float: left; 
+    margin-left: 45px;
+}
+
+#opciones-conectado {
+    width: 240px; 
+    border: 0px solid green; 
+    float: right; 
+    margin-top: 12px;
+}
+
+#opciones-no-conectado{
+    width: 170px; 
+    border: 0px solid green; 
+    float: right; 
+    margin-top: 12px;
+}

@@ -1,0 +1,218 @@
+/* 
+    Created on : Jun 2, 2016, 6:07:49 PM
+    Author     : Ing. Leonardo G. Tellez Saucedo <ltellez@info-arch.com>
+*/
+
+
+#div_tips_controles{
+    background-color: #AAAAAA;
+}
+
+.tip_table_head{
+    font-family: Arial;
+    font-size: 10px;
+    background-color: #AAAAAA;
+}
+
+.id{
+    width: 10px;
+}
+
+.titulo{
+    width: 200px;
+    
+}
+
+.descr{
+    width: 160px;  
+}
+
+.slider{
+    width: 25px;
+}
+
+.activo{
+    width: 25px;
+}
+
+.tipo{
+    width: 25px;
+}
+
+.eliminar{
+    width: 25px;
+}
+
+.modificar{
+    width: 25px;
+}
+
+.video{
+  width: 245px;  
+}
+
+#id_tip{
+    width: 10px;
+    margin-top: 0px;
+}
+
+.celda_img{
+    text-align: center;
+    width: 100px;
+}
+
+
+
+.celda_adm_tips{
+    vertical-align: top;
+
+}
+
+#btn_ok{
+    cursor: pointer;
+}
+
+#ed_tip_titulo{
+    max_width: 431px;
+}
+
+#ed_tip_video{
+    width:431px;
+}
+
+.img_delete{
+  cursor: pointer;  
+}
+
+
+.caja_video{
+    height: 167px;    
+    width: 228px;
+    margin-left:36px;    
+}
+
+.caja_video_pequena{
+    float: left;
+    height: 167px;    
+    width: 228px; 
+    margin-left:36px;
+    margin-bottom: 15px;
+}
+
+
+.li_tip{    
+    
+    margin-bottom: 30px;
+}
+
+.titulo_video{
+    font-family: Verdana;
+    font-size: 21px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left:36px;    
+}
+
+.contenedor_tips{
+    border: none 1px #00FF00;
+    margin: 0 auto;
+    width: 286px;    
+}
+.div_proyector {
+    border: none 1px #0000FF;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 284px;    
+}
+
+.ultimos_videos{
+    margin: 0 auto;    
+    width: 284px;
+}
+
+#adm_tips{
+    width: 100%;
+    background: white;
+}
+
+#adm_tips .filas_tips{
+   border-top-color: #000;
+}
+#adm_tips .filas_tips:hover{
+  border-top-color: blue;
+}
+
+
+
+
+
+
+@media all and (min-width: 450px) {     
+    .caja_video{
+        height: 209px;        
+        width: 323px;
+    }
+    
+    .contenedor_tips{
+        margin: 0 auto;
+        width: 382px;    
+    }
+            
+    .div_proyector { 
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        width: 378px;
+    }
+}
+
+
+@media all and (min-width: 650px) {
+    .caja_video{
+        height: 275px;
+        width: 400px;
+    }
+    
+    
+    .contenedor_tips{
+        margin: 0 auto;
+        width: 487px;    
+    }    
+    
+    
+    .div_proyector {
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        width: 469px;
+    }    
+    
+}
+
+@media all and (min-width: 975px) {
+   .caja_video{
+        height: 506px;       
+        width: 866px;
+    } 
+    
+    .div_proyector {
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        width: 868px;
+    }   
+    
+    .contenedor_tips{
+        margin: 0 auto;
+        width: 945px;
+
+    }    
+    
+    
+    .ultimos_videos{
+        margin: 0 auto;    
+        width: 806px;
+    }
+    
+}

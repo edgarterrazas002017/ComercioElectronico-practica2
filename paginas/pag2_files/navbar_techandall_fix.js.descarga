@@ -1,0 +1,52 @@
+jQuery(document).ready(function(){    
+    jQuery(".nav > li > a").click(function () {
+        if (jQuery(this).parent().hasClass('selected')) {
+            jQuery(".nav .selected").removeClass("selected"); // hiding popups
+        } else {
+                jQuery(".nav .selected").removeClass("selected");
+                jQuery(this).parent().addClass("selected"); // display popup
+        }
+        var txt = jQuery(this).attr('href');
+        if(txt==='#'){
+            return false;
+        }        
+    }); 
+//    jQuery(".nav > li").mouseenter(function () {
+//            jQuery(".nav .selected").removeClass("selected"); // hiding popups
+//    }); 
+//    jQuery(".nav .fulldrop").mouseleave(function(){
+//        jQuery(".nav .selected").removeClass("selected");
+//    });
+    jQuery(".menu_container .nav").mouseleave(function(){
+        jQuery(".nav .selected").removeClass("selected");
+    });
+
+    //MENUFLOTANTE-INI
+    // get initial top offset of navigation 
+    var menu_container_offset_top = jQuery('.menu_container').offset().top;
+
+    // define the floating navigation function
+    var menu_container_floating = function(){
+                // current vertical position from the top
+        var scroll_top = jQuery(window).scrollTop();
+         
+        // if scrolled more than the navigation, change its 
+                // position to fixed to float to top, otherwise change 
+                // it back to relative
+        if (scroll_top > menu_container_offset_top) {
+            jQuery('.menu_container').css({ 'position': 'relative', 'top':'0' ,'box-shadow': '0px 4px 12px 0px rgba(143, 143, 143, 0.88)','border-top':'1px solid #BD2826' });
+        } else {
+            jQuery('.menu_container').css({ 'position': 'relative' , 'box-shadow': '', 'border-top':'' });
+        }   
+    };
+     
+    // run function on load
+    menu_container_floating();
+    
+    // run function every time you scroll
+    jQuery(window).scroll(function() {
+         menu_container_floating();
+    });    
+    //MENUFLOTANTE-FIN
+
+});

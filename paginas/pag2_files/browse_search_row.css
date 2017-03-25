@@ -1,0 +1,23 @@
+a.sil:link{font-family:Arial, Helvetica, sans-serif; font-size:0.8em; text-decoration:none; color:#333;}
+a.sil:visited {font-family:Arial, Helvetica, sans-serif; font-size:0.8em; text-decoration:none;color:#333;}
+a.sil:hover {font-family:Arial, Helvetica, sans-serif; font-size:0.8em; text-decoration:none;color: #F60;}
+
+a.diam:link{font-family:Arial, Helvetica, sans-serif; font-size:0.8em; text-decoration:none; color:#4285F4; font-weight: normal}
+a.diam:visited {font-family:Arial, Helvetica, sans-serif; font-size:0.8em; text-decoration:none;color:#4285F4; font-weight: normal}
+a.diam:hover {font-family:Arial, Helvetica, sans-serif; font-size:0.8em; text-decoration: underline; color: #2174C0; font-weight: normal}
+
+a.tienda:link{font-family:Arial, Helvetica, sans-serif; font-size:0.8em; text-decoration:none; color:#D34041; font-weight: normal}
+a.tienda:visited {font-family:Arial, Helvetica, sans-serif; font-size:0.8em; text-decoration:none;color:#D34041; font-weight: normal}
+a.tienda:hover {font-family:Arial, Helvetica, sans-serif; font-size:0.8em; text-decoration: underline; color: #BE0000; font-weight: normal}
+
+.icono_listados {
+    margin-top: -8px; 
+    float: right;
+    width: 22px;
+}
+
+.titulo_tienda_membresia {
+    float: right; 
+    margin-top: -2px; 
+    margin-right: 5px;
+}

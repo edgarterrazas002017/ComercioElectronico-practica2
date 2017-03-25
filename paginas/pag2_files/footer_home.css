@@ -1,0 +1,18 @@
+.linea_b{border-left:2px dotted #ccc;float:left;height:103px;margin-left:7px;margin-right:5px;margin-top:41px}
+.contenedor_norton{
+    border:0px solid red; width: 49%; height:55px; padding-top: 2px; float: left; color: #6a6869; font-size: 1.1em;
+}
+.contenedor_redes_sociales{
+    border:0px solid blue; width: 49%; height: 55px; padding-top: 5px; font-size: 1.1em; color: #6a6869; float: right
+}
+.icon_footer_redes_sociales{background:rgba(0,0,0,0) url("../img/sprint-logo.png") repeat scroll 0 0;float:left;height:47px;margin-top:-5px;width:41px}
+.ico_facebook{background-position:-319px -64px}.ico_twitter{background-position:-374px -132px}.ico_google_plus{background-position:-318px -132px}.ico_pinterest{background-position:-374px -64px}.ico_youtube{background-position:-374px -4px}.ico_blog{background-position:-425px -4px}
+.contenedor_footer_dos{margin: 0 auto; border:0px solid red; width: 952px; height: 160px; padding-left: -14px; padding: 10px;}
+.ft_menuTitulo img {margin-left: 0px;}
+.ft_menuContenedor{margin-left: 13px;}
+
+#formasDePago {margin: 0 auto; width: 100%; background: #616161; text-align: center; height: 70px; border: 0px solid green}        
+.conten_pago {float: left; text-align: center;}
+.icon_pago{margin-left: 55px;}
+.txt_pago {width: 98px;height: 25px;color: #525051;padding-top: 2px;text-align: center;margin-left: 30px;font-size: 0.8em;}
+.titulo_formas_pago {color: #ffffff;font-weight: bold;}
